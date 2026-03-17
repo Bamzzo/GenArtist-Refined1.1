@@ -1,0 +1,40 @@
+# 1. 忽略环境与缓存
+.env
+venv/
+env/
+__pycache__/
+.ipynb_checkpoints/
+.cache/
+
+# 2. 忽略所有模型目录（这是大头）
+models/
+GroundingDINO/weights/
+AnyDoor/
+BoxDiff/
+Inpaint-Anything/
+LLM-groundedDiffusion/
+instruct-pix2pix/
+
+# 3. 忽略特定的巨型文件和压缩包
+config.zip
+config.zip.*
+*.zip
+*.tar
+*.gz
+
+# 4. 忽略所有可能的二进制权重格式（全路径扫描）
+**/*.safetensors
+**/*.pth
+**/*.ckpt
+**/*.bin
+**/*.onnx
+**/*.onnx_data
+**/*.msgpack
+**/*.h5
+**/*.mlpackage
+
+# 5. 忽略 Windows 遗留的库文件（针对你那个 venv）
+*.dll
+*.lib
+*.pyd
+*.exe

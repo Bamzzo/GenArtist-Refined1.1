@@ -1,0 +1,56 @@
+# 生产/云端环境：不含 torch/torchvision，请在机器上单独安装 CUDA 版，例如：
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+# --- Web 与配置 ---
+fastapi[all]>=0.109.0
+python-dotenv>=1.0.0
+pydantic-settings>=2.0.0
+
+# --- LLM / API ---
+openai>=1.37.0
+
+# --- 大模型与扩散 (transformers / diffusers / accelerate 等) ---
+accelerate>=0.21.0
+diffusers>=0.18.0
+transformers>=4.43.0
+huggingface-hub>=0.24.0
+xformers>=0.0.25
+safetensors>=0.4.0
+invisible-watermark>=0.2.0
+ftfy>=6.1.0
+
+# --- 训练/推理框架与配置 ---
+pytorch-lightning>=1.6.0
+omegaconf>=2.3.0
+einops>=0.6.0
+einops-exts>=0.0.4
+hydra-core>=1.3.0
+
+# --- 视觉与 OpenCLIP / 骨干 ---
+open-clip-torch>=2.24.0
+timm>=0.6.13
+
+# --- instruct-pix2pix (instruction 编辑分支) ---
+k-diffusion>=0.0.0
+
+# --- 图像与数值 ---
+Pillow>=10.2.0
+numpy>=1.26.0
+opencv-python>=4.9.0
+albumentations>=1.3.0
+imageio>=2.9.0
+imageio-ffmpeg>=0.5.0
+matplotlib>=3.7.0
+pandas>=2.2.0
+scipy>=1.10.0
+
+# --- 子项目/工具常用 ---
+easydict>=1.13
+PyYAML>=6.0.1
+filelock>=3.13.0
+fsspec>=2023.10.0
+transformers-stream-generator>=0.0.5
+webdataset>=0.2.86
+
+# --- 可选：深度推理加速（按需取消注释）---
+# deepspeed>=0.14.0

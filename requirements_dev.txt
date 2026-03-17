@@ -1,0 +1,21 @@
+# 本地开发专用：仅保证 app.py 及 demo_t2i / agent_tool_* / utils 能导入、不报 ModuleNotFoundError
+# 由项目根目录及 utils 下 .py 的顶层 import 扫描得出，不含子项目（LLM-groundedDiffusion / AnyDoor 等）依赖
+
+# --- Web 与配置 ---
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+
+# --- LLM 客户端 ---
+openai>=1.0.0
+
+# --- 图像与数值（demo_t2i + agent_tool_*）---
+Pillow>=10.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0
+matplotlib>=3.7.0
+
+# --- 深度学习与扩散（demo_t2i + agent_tool_*）---
+torch>=2.0.0
+diffusers>=0.25.0
